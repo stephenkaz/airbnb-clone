@@ -19,12 +19,12 @@ export default function InfoCard({
           src={img}
           layout="fill"
           objectFit="cover"
-          className="rounded-lg"
+          className="rounded-2xl"
         />
       </div>
 
       <div className="flex flex-col flex-grow pl-5">
-        <div className="flex justify-between ">
+        <div className="hidden sm:inline-flex justify-between ">
           <p>{location}</p>
           <HeartIcon className="h-7 cursor-pointer" />
         </div>
@@ -42,7 +42,7 @@ export default function InfoCard({
           </p>
 
           <div>
-            <p className="text-lg lg:tx-2xl font-semibold pb-2">{price}</p>
+            <p className="text-lg lg:text-2xl font-semibold pb-2">{price}</p>
             <p className="text-right font-extralight">{total}</p>
           </div>
         </div>

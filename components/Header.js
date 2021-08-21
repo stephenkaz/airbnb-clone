@@ -21,7 +21,7 @@ export default function Header({ placeholder }) {
   const router = useRouter();
 
   /* searchInput check */
-  // console(searchInput);
+  // console.log(searchInput);
 
   const handleSelect = (ranges) => {
     setStartDate(ranges.selection.startDate);
@@ -47,23 +47,22 @@ export default function Header({ placeholder }) {
   };
 
   const selectionRange = {
-    startDate: startDate,
-    endDate: endDate,
+    startDate,
+    endDate,
     key: "selection",
   };
 
   return (
     <header className="sticky top-0 z-50 grid grid-cols-3 bg-white shadow-md p-5 md:px-10">
       {/* left */}
-      <div
-        onClick={() => router.push("/")}
-        className="relative flex items-center h-10 cursor-pointer my-auto"
-      >
+      <div className="relative flex items-center h-10 my-auto">
         <Image
           src="https://links.papareact.com/qd3"
           layout="fill"
           objectFit="contain"
           objectPosition="left"
+          className="cursor-pointer"
+          onClick={() => router.push("/")}
         />
       </div>
 
@@ -91,16 +90,16 @@ export default function Header({ placeholder }) {
       </div>
 
       {searchInput && (
-        <div className="flex flex-col col-span-3 mx-auto">
+        <div className="flex flex-col col-span-3 mx-auto max-w-full">
           <DateRange
             ranges={[selectionRange]}
             minDate={new Date()}
             rangeColors={["#FD5B61"]}
             onChange={handleSelect}
           />
-          <div className="flex items-center border-b mb-4  max-w-full">
+          <div className="flex items-center border-b mb-4">
             <h2 className="text-2xl flex-grow font-semibold">
-              Number of Guests
+              Number of Guests{" "}
             </h2>
 
             <UsersIcon className="h-5" />

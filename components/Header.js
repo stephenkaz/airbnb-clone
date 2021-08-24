@@ -71,7 +71,7 @@ export default function Header({ placeholder }) {
         <input
           value={searchInput}
           onChange={(e) => setSearchInput(e.target.value)}
-          className="flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400 max-w-[145px] sm:max-w-full"
+          className="flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400 max-w-[135px] sm:max-w-full"
           type="text"
           placeholder={placeholder || "Start your search"}
         />
